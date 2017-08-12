@@ -23,6 +23,5 @@ typedef struct _InputField {
 @interface SearchModel : NSObject
 
 @property InputField inputField;
-@property (nonatomic,strong) NSArray *favoritePlaces;
-
+-(Coordinate)coordinateForPlace:(NSString *)placeName;
 @end

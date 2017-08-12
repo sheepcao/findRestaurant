@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class SearchModel;
+#import "SearchModel.h"
 
 @interface SearchViewModel : NSObject
 @property (nonatomic, strong) SearchModel *searchModel;
+@property (nonatomic,strong) NSArray *favoritePlaces;
+
 
 -(instancetype)initWithLatitude:(NSString *)lat Longitude:(NSString *)longi Radius:(NSString *)radius;
+-(instancetype)initWithPlace:(NSString *)place Radius:(NSString *)radius;
 
 -(void)requestRestaurantsNearbyWithBlock:(void(^)(NSString * successJson, NSError *error))block;
 @end

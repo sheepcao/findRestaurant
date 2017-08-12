@@ -39,7 +39,7 @@
                     <view key="view" contentMode="scaleToFill" id="MAr-c0-Dpf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.78518194901315785" green="0.11096833881578938" blue="0.12469161184210527" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92719469572368418" green="0.51840049342105265" blue="0.084703947368421059" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="k59-so-ZKX"/>
                 </viewController>

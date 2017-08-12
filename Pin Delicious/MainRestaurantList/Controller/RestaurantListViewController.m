@@ -7,14 +7,14 @@
 //
 
 #import "RestaurantListViewController.h"
-#import "SearchView.h"
+#import "SearchViewController.h"
 #import "RestaurantListView.h"
 #import "restaurantTableViewCell.h"
 #import "SearchViewModel.h"
 #import "RestaurantsViewModel.h"
 
 @interface RestaurantListViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) SearchView *searchView;
+@property (nonatomic,strong) SearchViewController *searchViewController;
 @property (nonatomic,strong) RestaurantListView *restaurantListView;
 @property (nonatomic,strong) RestaurantsViewModel *restaurantViewModel;
 
@@ -38,22 +38,9 @@
     
     [self addSearch];
     self.restaurantViewModel = [[RestaurantsViewModel alloc] init];
-    SearchViewModel *searchVM = [[SearchViewModel alloc] initWithLatitude:@"31.194221" Longitude:@"121.517046" Radius:@"5000"];
-    PDWeakSelf(weakSelf);
-    [searchVM requestRestaurantsNearbyWithBlock:^(NSString *successJson, NSError *error) {
-        if (error) {
-        }else
-        {
-            PDStrongSelf(strongSelf);
-            PDLog(@"successJson-:%@",successJson);
-            [strongSelf.restaurantViewModel restaurantsFromJSONString:successJson];
-            [strongSelf.restaurantListView.restaurantList reloadData];
-            PDLog(@"%@",strongSelf.restaurantViewModel);
-            
-            
-        }
-    }];
-    
+    self.searchViewController.searchViewModel = [[SearchViewModel alloc] initWithLatitude:@"31.194221" Longitude:@"121.517046" Radius:@"5000"];
+   
+    [self doSearchActionOnFirstLaunch:YES WithSearchViewModel:self.searchViewController.searchViewModel];
 }
 
 
@@ -65,27 +52,50 @@
 }
 
 - (void)addSearch{
-    SearchView *mySearchView = [[SearchView alloc] init];;
-    self.searchView = mySearchView;
-    mySearchView.backgroundColor = PDRGBColor(187, 187, 187);
-    mySearchView.alpha = 0.95;
-    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
-    [win addSubview:mySearchView];
-    
-    
-    mySearchView.frame = [UIScreen mainScreen].bounds;
-    mySearchView.y = 64;
-    mySearchView.height -= 64;
-    self.searchView.hidden = YES;
-    
+    SearchViewController *mySearchVC = [[SearchViewController alloc] init];;
+    self.searchViewController = mySearchVC;
+    PDWeakSelf(weakSelf);
+    [mySearchVC addSearchWithSearchClick:^(SearchViewModel *input) {
+        NSLog(@"doSearchAction");
+        PDStrongSelf(strongSelf);
+        [strongSelf doSearchActionOnFirstLaunch:NO WithSearchViewModel:input];
+    }];
+}
+
+-(void)doSearchActionOnFirstLaunch:(BOOL)isFirstLaunch WithSearchViewModel:(SearchViewModel *)searchVM
+{
+    PDWeakSelf(weakSelf);
+    if (!isFirstLaunch) {
+        [weakSelf rightItemClick];
+    }
+    [ProgressHUD show:@"Please wait..." Interaction:NO];
+
+    [searchVM requestRestaurantsNearbyWithBlock:^(NSString *successJson, NSError *error) {
+        if (error) {
+            PDLog(@"error-:%@", error);
+            [ProgressHUD showError:@"Some thing went wrong" Interaction:NO];
+
+        }else
+        {
+            PDStrongSelf(strongSelf);
+            PDLog(@"successJson-:%@",successJson);
+            [strongSelf.restaurantViewModel restaurantsFromJSONString:successJson];
+            [strongSelf.restaurantListView.restaurantList reloadData];
+            PDLog(@"%@",strongSelf.restaurantViewModel);
+            [ProgressHUD dismiss];
+
+            
+        }
+    }];
+
 }
 
 - (void)rightItemClick{
     
-    if (!self.searchView.hidden) {
+    if (!self.searchViewController.searchView.hidden) {
         
         
-        self.searchView.hidden = YES;
+        self.searchViewController.searchView.hidden = YES;
         [UIView animateWithDuration:0.1 animations:^{
             self.restaurantListView.rightItem.transform = CGAffineTransformRotate(self.restaurantListView.rightItem.transform, M_1_PI * 5);
             
@@ -95,8 +105,8 @@
     }else{
         
         [self.restaurantListView.rightItem setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
-        self.searchView.hidden = NO;
-        [self.searchView addAnimate];
+        self.searchViewController.searchView.hidden = NO;
+        [self.searchViewController.searchView addAnimate];
         [UIView animateWithDuration:0.2 animations:^{
             self.restaurantListView.rightItem.transform = CGAffineTransformRotate(self.restaurantListView.rightItem.transform, -M_1_PI * 6);
             

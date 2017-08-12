@@ -18,20 +18,23 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - pop (1.0.9)
+  - ProgressHUD (2.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - FMDB
   - pop (~> 1.0)
+  - ProgressHUD
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  ProgressHUD: 0d2afb77bc41997dfff1aafb8617317d858834a9
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ebc13d419488a99a7cd286b5caaa4f570cb26d54
+PODFILE CHECKSUM: f788cca902aa85cea1e681b0bc3f51bf6eb35f6a
 
 COCOAPODS: 1.2.0

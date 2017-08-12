@@ -11,7 +11,19 @@
 #import "FoursquareAPIClient.h"
 #import "FoursquareCredentialModel.h"
 
+@interface SearchViewModel()
+@property (nonatomic,strong) NSURLSessionTask *task;
+
+@end
 @implementation SearchViewModel
+
+
+-(NSArray *)favoritePlaces
+{
+    // could fetch Places thru any approach in this getter. The current UI design can support no more than 6 places.
+    return @[@"Essex Office",@"复旦大学"];
+}
+
 
 -(instancetype)initWithLatitude:(NSString *)lat Longitude:(NSString *)longi Radius:(NSString *)radius
 {
@@ -20,6 +32,18 @@
         
         Coordinate coor = {[lat floatValue],[longi floatValue]};
         InputField inputs = {coor,[radius floatValue]};
+        self.searchModel.inputField = inputs;
+    }
+    return self;
+}
+
+-(instancetype)initWithPlace:(NSString *)place Radius:(NSString *)radius
+{
+    self = [super init];
+    if (self) {
+        self.searchModel = [[SearchModel alloc] init];
+        Coordinate coor = [self.searchModel coordinateForPlace:place];
+        InputField inputs = {coor,[radius floatValue]*1000};
         self.searchModel.inputField = inputs;
     }
     return self;
@@ -34,8 +58,11 @@
     NSDictionary *parameterDic = @{@"client_id":credential.clientID,@"client_secret":credential.clientSecret,@"radius":radius,@"ll":ll,@"limit":@"50",@"v":@"20170707",@"query":@"restaurant"};
     PDLog(@"parameterDic-:%@",parameterDic);
 
-    
-    [[FoursquareAPIClient sharedClient] GET:@"venues/search" parameters:parameterDic progress:nil success:^(NSURLSessionDataTask * __unused task, NSString *JSON) {
+    if (self.task) {
+        [self.task cancel];
+        self.task = nil;
+    }
+    self.task = [[FoursquareAPIClient sharedClient] GET:@"venues/search" parameters:parameterDic progress:nil success:^(NSURLSessionDataTask * __unused task, NSString *JSON) {
         if (block) {
             block(JSON,nil);
         }
@@ -47,6 +74,7 @@
     }];
 
 }
+
 
 // lazy load, can avoid the getter return nil when not using -[initWithLat...]
 -(SearchModel *)searchModel

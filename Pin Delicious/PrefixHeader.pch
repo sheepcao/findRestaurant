@@ -14,6 +14,6 @@
 #import "YYModel.h"
 #import "PDEasyMacro.h"
 #import "UIView+Frame.h"
-
+#import "ProgressHUD.h"
 
 #endif /* PrefixHeader_pch */

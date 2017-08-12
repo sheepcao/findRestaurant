@@ -10,12 +10,6 @@
 
 @implementation SearchModel
 
--(NSArray *)favoritePlaces
-{
-    // could fetch Places thru any approach in this getter.
-    return @[@"Essex Office",@"复旦大学"];
-}
-
 -(Coordinate)coordinateForPlace:(NSString *)placeName
 {
     //better enhance this matching method with local storage or online anti-geo decode
