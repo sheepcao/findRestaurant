@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  Pin Delicious
+//
+//  Created by HSBC_XiAn_Core on 8/12/17.
+//  Copyright © 2017 ericcao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "YYModel.h"
+#import "PDEasyMacro.h"
+#import "UIView+Frame.h"
+
+
+#endif /* PrefixHeader_pch */

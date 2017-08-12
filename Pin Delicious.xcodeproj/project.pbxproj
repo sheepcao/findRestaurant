@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ABCF37B54B2F49CB68DD335 /* libPods-Pin Delicious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C218B8CDAC4FD08805ABE /* libPods-Pin Delicious.a */; };
+		6560DAE21F3EB3CE006ECED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAE11F3EB3CE006ECED5 /* main.m */; };
+		6560DAE51F3EB3CE006ECED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAE41F3EB3CE006ECED5 /* AppDelegate.m */; };
+		6560DAEB1F3EB3CE006ECED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6560DAE91F3EB3CE006ECED5 /* Main.storyboard */; };
+		6560DAED1F3EB3CE006ECED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6560DAEC1F3EB3CE006ECED5 /* Assets.xcassets */; };
+		6560DAF01F3EB3CE006ECED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6560DAEE1F3EB3CE006ECED5 /* LaunchScreen.storyboard */; };
+		6560DB2D1F3EB706006ECED5 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAFE1F3EB706006ECED5 /* JSONHelper.m */; };
+		6560DB2E1F3EB706006ECED5 /* LocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB011F3EB706006ECED5 /* LocalStorage.m */; };
+		6560DB2F1F3EB706006ECED5 /* FoursquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */; };
+		6560DB301F3EB706006ECED5 /* ScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB071F3EB706006ECED5 /* ScreenPresenter.m */; };
+		6560DB311F3EB706006ECED5 /* AllDataReceivedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB0C1F3EB706006ECED5 /* AllDataReceivedModel.m */; };
+		6560DB321F3EB706006ECED5 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB0E1F3EB706006ECED5 /* Categories.m */; };
+		6560DB331F3EB706006ECED5 /* CategoryIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB101F3EB706006ECED5 /* CategoryIcon.m */; };
+		6560DB341F3EB706006ECED5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB121F3EB706006ECED5 /* Location.m */; };
+		6560DB351F3EB706006ECED5 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB141F3EB706006ECED5 /* ResponseModel.m */; };
+		6560DB361F3EB706006ECED5 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB161F3EB706006ECED5 /* Restaurant.m */; };
+		6560DB371F3EB706006ECED5 /* RestaurantsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB191F3EB706006ECED5 /* RestaurantsViewModel.m */; };
+		6560DB381F3EB706006ECED5 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB201F3EB706006ECED5 /* Review.m */; };
+		6560DB391F3EB706006ECED5 /* FoursquareCredentialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB261F3EB706006ECED5 /* FoursquareCredentialModel.m */; };
+		6560DB3A1F3EB706006ECED5 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB281F3EB706006ECED5 /* SearchModel.m */; };
+		6560DB3B1F3EB706006ECED5 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB2B1F3EB706006ECED5 /* SearchViewModel.m */; };
+		6560DB3E1F3EB9A2006ECED5 /* PDNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */; };
+		6560DB421F3EBC97006ECED5 /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB411F3EBC97006ECED5 /* RestaurantListViewController.m */; };
+		6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB441F3EBD42006ECED5 /* SearchViewController.m */; };
+		6560DB4A1F3EBD6E006ECED5 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB491F3EBD6E006ECED5 /* SearchView.m */; };
+		6560DB4F1F3EC0F9006ECED5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB4E1F3EC0F9006ECED5 /* UIView+Frame.m */; };
+		6560DB521F3EDDD9006ECED5 /* RestaurantListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB511F3EDDD9006ECED5 /* RestaurantListView.m */; };
+		6560DB591F3EE731006ECED5 /* restaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB571F3EE731006ECED5 /* restaurantTableViewCell.m */; };
+		6560DB5A1F3EE731006ECED5 /* restaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6560DB581F3EE731006ECED5 /* restaurantTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		320A4032CB63326C0743B07E /* Pods-Pin Delicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pin Delicious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious.debug.xcconfig"; sourceTree = "<group>"; };
+		6560DADD1F3EB3CE006ECED5 /* Pin Delicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pin Delicious.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6560DAE11F3EB3CE006ECED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6560DAE31F3EB3CE006ECED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6560DAE41F3EB3CE006ECED5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6560DAEA1F3EB3CE006ECED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6560DAEC1F3EB3CE006ECED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6560DAEF1F3EB3CE006ECED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6560DAF11F3EB3CE006ECED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6560DAFD1F3EB706006ECED5 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
+		6560DAFE1F3EB706006ECED5 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		6560DB001F3EB706006ECED5 /* LocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStorage.h; sourceTree = "<group>"; };
+		6560DB011F3EB706006ECED5 /* LocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorage.m; sourceTree = "<group>"; };
+		6560DB031F3EB706006ECED5 /* FoursquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPIClient.h; sourceTree = "<group>"; };
+		6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPIClient.m; sourceTree = "<group>"; };
+		6560DB061F3EB706006ECED5 /* ScreenPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenPresenter.h; sourceTree = "<group>"; };
+		6560DB071F3EB706006ECED5 /* ScreenPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenPresenter.m; sourceTree = "<group>"; };
+		6560DB0B1F3EB706006ECED5 /* AllDataReceivedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllDataReceivedModel.h; sourceTree = "<group>"; };
+		6560DB0C1F3EB706006ECED5 /* AllDataReceivedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllDataReceivedModel.m; sourceTree = "<group>"; };
+		6560DB0D1F3EB706006ECED5 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		6560DB0E1F3EB706006ECED5 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		6560DB0F1F3EB706006ECED5 /* CategoryIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryIcon.h; sourceTree = "<group>"; };
+		6560DB101F3EB706006ECED5 /* CategoryIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryIcon.m; sourceTree = "<group>"; };
+		6560DB111F3EB706006ECED5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		6560DB121F3EB706006ECED5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		6560DB131F3EB706006ECED5 /* ResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseModel.h; sourceTree = "<group>"; };
+		6560DB141F3EB706006ECED5 /* ResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseModel.m; sourceTree = "<group>"; };
+		6560DB151F3EB706006ECED5 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		6560DB161F3EB706006ECED5 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		6560DB181F3EB706006ECED5 /* RestaurantsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsViewModel.h; sourceTree = "<group>"; };
+		6560DB191F3EB706006ECED5 /* RestaurantsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsViewModel.m; sourceTree = "<group>"; };
+		6560DB1F1F3EB706006ECED5 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		6560DB201F3EB706006ECED5 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		6560DB251F3EB706006ECED5 /* FoursquareCredentialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareCredentialModel.h; sourceTree = "<group>"; };
+		6560DB261F3EB706006ECED5 /* FoursquareCredentialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareCredentialModel.m; sourceTree = "<group>"; };
+		6560DB271F3EB706006ECED5 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		6560DB281F3EB706006ECED5 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		6560DB2A1F3EB706006ECED5 /* SearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
+		6560DB2B1F3EB706006ECED5 /* SearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
+		6560DB3C1F3EB9A2006ECED5 /* PDNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDNavController.h; path = Search/PDNavController.h; sourceTree = "<group>"; };
+		6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDNavController.m; path = Search/PDNavController.m; sourceTree = "<group>"; };
+		6560DB3F1F3EBB14006ECED5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6560DB401F3EBC97006ECED5 /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
+		6560DB411F3EBC97006ECED5 /* RestaurantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListViewController.m; sourceTree = "<group>"; };
+		6560DB431F3EBD42006ECED5 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		6560DB441F3EBD42006ECED5 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		6560DB481F3EBD6E006ECED5 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		6560DB491F3EBD6E006ECED5 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		6560DB4C1F3EC0F9006ECED5 /* PDEasyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEasyMacro.h; sourceTree = "<group>"; };
+		6560DB4D1F3EC0F9006ECED5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		6560DB4E1F3EC0F9006ECED5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		6560DB501F3EDDD9006ECED5 /* RestaurantListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListView.h; sourceTree = "<group>"; };
+		6560DB511F3EDDD9006ECED5 /* RestaurantListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListView.m; sourceTree = "<group>"; };
+		6560DB561F3EE731006ECED5 /* restaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = restaurantTableViewCell.h; sourceTree = "<group>"; };
+		6560DB571F3EE731006ECED5 /* restaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = restaurantTableViewCell.m; sourceTree = "<group>"; };
+		6560DB581F3EE731006ECED5 /* restaurantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = restaurantTableViewCell.xib; sourceTree = "<group>"; };
+		B83C218B8CDAC4FD08805ABE /* libPods-Pin Delicious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pin Delicious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8040997DE6122307EEE72A9 /* Pods-Pin Delicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pin Delicious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6560DADA1F3EB3CE006ECED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ABCF37B54B2F49CB68DD335 /* libPods-Pin Delicious.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21F9D0200681B2532A3766B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B83C218B8CDAC4FD08805ABE /* libPods-Pin Delicious.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36A67C9E237157CA842587BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				320A4032CB63326C0743B07E /* Pods-Pin Delicious.debug.xcconfig */,
+				D8040997DE6122307EEE72A9 /* Pods-Pin Delicious.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6560DAD41F3EB3CE006ECED5 = {
+			isa = PBXGroup;
+			children = (
+				6560DADF1F3EB3CE006ECED5 /* Pin Delicious */,
+				6560DADE1F3EB3CE006ECED5 /* Products */,
+				36A67C9E237157CA842587BC /* Pods */,
+				21F9D0200681B2532A3766B1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6560DADE1F3EB3CE006ECED5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6560DADD1F3EB3CE006ECED5 /* Pin Delicious.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6560DADF1F3EB3CE006ECED5 /* Pin Delicious */ = {
+			isa = PBXGroup;
+			children = (
+				6560DAFB1F3EB706006ECED5 /* CommonUtil */,
+				6560DB081F3EB706006ECED5 /* MainRestaurantList */,
+				6560DB1B1F3EB706006ECED5 /* Review */,
+				6560DB221F3EB706006ECED5 /* Search */,
+				6560DAE31F3EB3CE006ECED5 /* AppDelegate.h */,
+				6560DAE41F3EB3CE006ECED5 /* AppDelegate.m */,
+				6560DB3C1F3EB9A2006ECED5 /* PDNavController.h */,
+				6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */,
+				6560DB3F1F3EBB14006ECED5 /* PrefixHeader.pch */,
+				6560DAE91F3EB3CE006ECED5 /* Main.storyboard */,
+				6560DAEC1F3EB3CE006ECED5 /* Assets.xcassets */,
+				6560DAEE1F3EB3CE006ECED5 /* LaunchScreen.storyboard */,
+				6560DAF11F3EB3CE006ECED5 /* Info.plist */,
+				6560DAE01F3EB3CE006ECED5 /* Supporting Files */,
+			);
+			path = "Pin Delicious";
+			sourceTree = "<group>";
+		};
+		6560DAE01F3EB3CE006ECED5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6560DAE11F3EB3CE006ECED5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6560DAFB1F3EB706006ECED5 /* CommonUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB4B1F3EC0F9006ECED5 /* Tools */,
+				6560DAFC1F3EB706006ECED5 /* JSONHelper */,
+				6560DAFF1F3EB706006ECED5 /* LocalStorage */,
+				6560DB021F3EB706006ECED5 /* NetworkingManager */,
+				6560DB051F3EB706006ECED5 /* Presenter */,
+			);
+			path = CommonUtil;
+			sourceTree = "<group>";
+		};
+		6560DAFC1F3EB706006ECED5 /* JSONHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6560DAFD1F3EB706006ECED5 /* JSONHelper.h */,
+				6560DAFE1F3EB706006ECED5 /* JSONHelper.m */,
+			);
+			path = JSONHelper;
+			sourceTree = "<group>";
+		};
+		6560DAFF1F3EB706006ECED5 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB001F3EB706006ECED5 /* LocalStorage.h */,
+				6560DB011F3EB706006ECED5 /* LocalStorage.m */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		6560DB021F3EB706006ECED5 /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB031F3EB706006ECED5 /* FoursquareAPIClient.h */,
+				6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */,
+			);
+			path = NetworkingManager;
+			sourceTree = "<group>";
+		};
+		6560DB051F3EB706006ECED5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB061F3EB706006ECED5 /* ScreenPresenter.h */,
+				6560DB071F3EB706006ECED5 /* ScreenPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6560DB081F3EB706006ECED5 /* MainRestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB091F3EB706006ECED5 /* Controller */,
+				6560DB0A1F3EB706006ECED5 /* Model */,
+				6560DB1A1F3EB706006ECED5 /* View */,
+			);
+			path = MainRestaurantList;
+			sourceTree = "<group>";
+		};
+		6560DB091F3EB706006ECED5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB401F3EBC97006ECED5 /* RestaurantListViewController.h */,
+				6560DB411F3EBC97006ECED5 /* RestaurantListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6560DB0A1F3EB706006ECED5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB0B1F3EB706006ECED5 /* AllDataReceivedModel.h */,
+				6560DB0C1F3EB706006ECED5 /* AllDataReceivedModel.m */,
+				6560DB0D1F3EB706006ECED5 /* Categories.h */,
+				6560DB0E1F3EB706006ECED5 /* Categories.m */,
+				6560DB0F1F3EB706006ECED5 /* CategoryIcon.h */,
+				6560DB101F3EB706006ECED5 /* CategoryIcon.m */,
+				6560DB111F3EB706006ECED5 /* Location.h */,
+				6560DB121F3EB706006ECED5 /* Location.m */,
+				6560DB131F3EB706006ECED5 /* ResponseModel.h */,
+				6560DB141F3EB706006ECED5 /* ResponseModel.m */,
+				6560DB151F3EB706006ECED5 /* Restaurant.h */,
+				6560DB161F3EB706006ECED5 /* Restaurant.m */,
+				6560DB171F3EB706006ECED5 /* ViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6560DB171F3EB706006ECED5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB181F3EB706006ECED5 /* RestaurantsViewModel.h */,
+				6560DB191F3EB706006ECED5 /* RestaurantsViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6560DB1A1F3EB706006ECED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB501F3EDDD9006ECED5 /* RestaurantListView.h */,
+				6560DB511F3EDDD9006ECED5 /* RestaurantListView.m */,
+				6560DB561F3EE731006ECED5 /* restaurantTableViewCell.h */,
+				6560DB571F3EE731006ECED5 /* restaurantTableViewCell.m */,
+				6560DB581F3EE731006ECED5 /* restaurantTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6560DB1B1F3EB706006ECED5 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB1C1F3EB706006ECED5 /* Controller */,
+				6560DB1D1F3EB706006ECED5 /* Model */,
+				6560DB211F3EB706006ECED5 /* View */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		6560DB1C1F3EB706006ECED5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6560DB1D1F3EB706006ECED5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB1E1F3EB706006ECED5 /* ModelView */,
+				6560DB1F1F3EB706006ECED5 /* Review.h */,
+				6560DB201F3EB706006ECED5 /* Review.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6560DB1E1F3EB706006ECED5 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		6560DB211F3EB706006ECED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6560DB221F3EB706006ECED5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB231F3EB706006ECED5 /* Controller */,
+				6560DB241F3EB706006ECED5 /* Model */,
+				6560DB2C1F3EB706006ECED5 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6560DB231F3EB706006ECED5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB431F3EBD42006ECED5 /* SearchViewController.h */,
+				6560DB441F3EBD42006ECED5 /* SearchViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6560DB241F3EB706006ECED5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB251F3EB706006ECED5 /* FoursquareCredentialModel.h */,
+				6560DB261F3EB706006ECED5 /* FoursquareCredentialModel.m */,
+				6560DB271F3EB706006ECED5 /* SearchModel.h */,
+				6560DB281F3EB706006ECED5 /* SearchModel.m */,
+				6560DB291F3EB706006ECED5 /* ViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6560DB291F3EB706006ECED5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB2A1F3EB706006ECED5 /* SearchViewModel.h */,
+				6560DB2B1F3EB706006ECED5 /* SearchViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6560DB2C1F3EB706006ECED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB481F3EBD6E006ECED5 /* SearchView.h */,
+				6560DB491F3EBD6E006ECED5 /* SearchView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6560DB4B1F3EC0F9006ECED5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6560DB4C1F3EC0F9006ECED5 /* PDEasyMacro.h */,
+				6560DB4D1F3EC0F9006ECED5 /* UIView+Frame.h */,
+				6560DB4E1F3EC0F9006ECED5 /* UIView+Frame.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6560DADC1F3EB3CE006ECED5 /* Pin Delicious */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6560DAF41F3EB3CE006ECED5 /* Build configuration list for PBXNativeTarget "Pin Delicious" */;
+			buildPhases = (
+				02C3C52D9A73BE99E67EAF47 /* [CP] Check Pods Manifest.lock */,
+				6560DAD91F3EB3CE006ECED5 /* Sources */,
+				6560DADA1F3EB3CE006ECED5 /* Frameworks */,
+				6560DADB1F3EB3CE006ECED5 /* Resources */,
+				A2D182413DE4A5B24977FE01 /* [CP] Embed Pods Frameworks */,
+				CDF60881FD81D83AB339FA91 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pin Delicious";
+			productName = "Pin Delicious";
+			productReference = 6560DADD1F3EB3CE006ECED5 /* Pin Delicious.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6560DAD51F3EB3CE006ECED5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ericcao;
+				TargetAttributes = {
+					6560DADC1F3EB3CE006ECED5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6560DAD81F3EB3CE006ECED5 /* Build configuration list for PBXProject "Pin Delicious" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6560DAD41F3EB3CE006ECED5;
+			productRefGroup = 6560DADE1F3EB3CE006ECED5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6560DADC1F3EB3CE006ECED5 /* Pin Delicious */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6560DADB1F3EB3CE006ECED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6560DB5A1F3EE731006ECED5 /* restaurantTableViewCell.xib in Resources */,
+				6560DAF01F3EB3CE006ECED5 /* LaunchScreen.storyboard in Resources */,
+				6560DAED1F3EB3CE006ECED5 /* Assets.xcassets in Resources */,
+				6560DAEB1F3EB3CE006ECED5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02C3C52D9A73BE99E67EAF47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D182413DE4A5B24977FE01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF60881FD81D83AB339FA91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6560DAD91F3EB3CE006ECED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6560DB301F3EB706006ECED5 /* ScreenPresenter.m in Sources */,
+				6560DB3E1F3EB9A2006ECED5 /* PDNavController.m in Sources */,
+				6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */,
+				6560DB421F3EBC97006ECED5 /* RestaurantListViewController.m in Sources */,
+				6560DB371F3EB706006ECED5 /* RestaurantsViewModel.m in Sources */,
+				6560DB3A1F3EB706006ECED5 /* SearchModel.m in Sources */,
+				6560DB4A1F3EBD6E006ECED5 /* SearchView.m in Sources */,
+				6560DB2D1F3EB706006ECED5 /* JSONHelper.m in Sources */,
+				6560DAE51F3EB3CE006ECED5 /* AppDelegate.m in Sources */,
+				6560DB361F3EB706006ECED5 /* Restaurant.m in Sources */,
+				6560DB4F1F3EC0F9006ECED5 /* UIView+Frame.m in Sources */,
+				6560DB341F3EB706006ECED5 /* Location.m in Sources */,
+				6560DB321F3EB706006ECED5 /* Categories.m in Sources */,
+				6560DB311F3EB706006ECED5 /* AllDataReceivedModel.m in Sources */,
+				6560DB3B1F3EB706006ECED5 /* SearchViewModel.m in Sources */,
+				6560DB331F3EB706006ECED5 /* CategoryIcon.m in Sources */,
+				6560DB591F3EE731006ECED5 /* restaurantTableViewCell.m in Sources */,
+				6560DB2E1F3EB706006ECED5 /* LocalStorage.m in Sources */,
+				6560DB2F1F3EB706006ECED5 /* FoursquareAPIClient.m in Sources */,
+				6560DB351F3EB706006ECED5 /* ResponseModel.m in Sources */,
+				6560DAE21F3EB3CE006ECED5 /* main.m in Sources */,
+				6560DB381F3EB706006ECED5 /* Review.m in Sources */,
+				6560DB391F3EB706006ECED5 /* FoursquareCredentialModel.m in Sources */,
+				6560DB521F3EDDD9006ECED5 /* RestaurantListView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6560DAE91F3EB3CE006ECED5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6560DAEA1F3EB3CE006ECED5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6560DAEE1F3EB3CE006ECED5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6560DAEF1F3EB3CE006ECED5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6560DAF21F3EB3CE006ECED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6560DAF31F3EB3CE006ECED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6560DAF51F3EB3CE006ECED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320A4032CB63326C0743B07E /* Pods-Pin Delicious.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pin Delicious/PrefixHeader.pch";
+				INFOPLIST_FILE = "Pin Delicious/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericcao.com.Pin-Delicious";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6560DAF61F3EB3CE006ECED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8040997DE6122307EEE72A9 /* Pods-Pin Delicious.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pin Delicious/PrefixHeader.pch";
+				INFOPLIST_FILE = "Pin Delicious/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericcao.com.Pin-Delicious";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6560DAD81F3EB3CE006ECED5 /* Build configuration list for PBXProject "Pin Delicious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6560DAF21F3EB3CE006ECED5 /* Debug */,
+				6560DAF31F3EB3CE006ECED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6560DAF41F3EB3CE006ECED5 /* Build configuration list for PBXNativeTarget "Pin Delicious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6560DAF51F3EB3CE006ECED5 /* Debug */,
+				6560DAF61F3EB3CE006ECED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6560DAD51F3EB3CE006ECED5 /* Project object */;
+}
