@@ -61,7 +61,7 @@
     NSLog(@"goSearch");
     
     if (self.searchHandler) {
-        NSString *radiusText = [self.searchView.radiusLabel.text componentsSeparatedByString:@" "][1];
+        NSString *radiusText = [self.searchView.radiusLabel.text componentsSeparatedByString:@" "][0];
         NSString *placeName = self.searchView.place.text;
         if (!placeName || [placeName isEqualToString:@""]) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:@"请选择一个地点" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];

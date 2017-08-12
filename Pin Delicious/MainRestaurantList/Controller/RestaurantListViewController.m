@@ -12,11 +12,15 @@
 #import "restaurantTableViewCell.h"
 #import "SearchViewModel.h"
 #import "RestaurantsViewModel.h"
+#import "LocalStorage.h"
+#import "ReviewViewController.h"
+#import "PDNavController.h"
 
 @interface RestaurantListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) SearchViewController *searchViewController;
 @property (nonatomic,strong) RestaurantListView *restaurantListView;
 @property (nonatomic,strong) RestaurantsViewModel *restaurantViewModel;
+@property(nonatomic,strong)UIButton *rightItem;
 
 @end
 
@@ -40,11 +44,39 @@
     self.restaurantViewModel = [[RestaurantsViewModel alloc] init];
     self.searchViewController.searchViewModel = [[SearchViewModel alloc] initWithLatitude:@"31.194221" Longitude:@"121.517046" Radius:@"5000"];
    
+    //TODO: 这里 Foursquare API有问题， 搜索半径是a米的话，会搜出来少数大于a米的结果
     [self doSearchActionOnFirstLaunch:YES WithSearchViewModel:self.searchViewController.searchViewModel];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self addSearchButton];
+}
 
 
+-(void)addSearchButton
+{
+    UIButton *rightItem = [[UIButton alloc]init];
+    self.rightItem = rightItem;
+    rightItem.y = 0;
+    rightItem.width = 45;
+    rightItem.height = 45;
+    [rightItem addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    rightItem.x = [UIScreen mainScreen].bounds.size.width - rightItem.width;
+    PDLog(@"%@",NSStringFromCGRect(rightItem.frame));
+    [rightItem setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+    
+
+    PDNavController *navi = (PDNavController *)self.navigationController;
+    if(navi.rightButton)
+    {
+        [navi.rightButton removeFromSuperview];
+    }
+    navi.rightButton = rightItem;
+    [navi.navigationBar addSubview:rightItem];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -78,7 +110,7 @@
         }else
         {
             PDStrongSelf(strongSelf);
-            PDLog(@"successJson-:%@",successJson);
+//            PDLog(@"successJson-:%@",successJson);
             [strongSelf.restaurantViewModel restaurantsFromJSONString:successJson];
             [strongSelf.restaurantListView.restaurantList reloadData];
             PDLog(@"%@",strongSelf.restaurantViewModel);
@@ -97,23 +129,23 @@
         
         self.searchViewController.searchView.hidden = YES;
         [UIView animateWithDuration:0.1 animations:^{
-            self.restaurantListView.rightItem.transform = CGAffineTransformRotate(self.restaurantListView.rightItem.transform, M_1_PI * 5);
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI * 5);
             
         } completion:^(BOOL finished) {
-            [self.restaurantListView.rightItem setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+            [self.rightItem setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
         }];
     }else{
         
-        [self.restaurantListView.rightItem setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
+        [self.rightItem setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
         self.searchViewController.searchView.hidden = NO;
         [self.searchViewController.searchView addAnimate];
         [UIView animateWithDuration:0.2 animations:^{
-            self.restaurantListView.rightItem.transform = CGAffineTransformRotate(self.restaurantListView.rightItem.transform, -M_1_PI * 6);
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, -M_1_PI * 6);
             
         } completion:^(BOOL finished) {
             
             [UIView animateWithDuration:0.1 animations:^{
-                self.restaurantListView.rightItem.transform = CGAffineTransformRotate(self.restaurantListView.rightItem.transform, M_1_PI );
+                self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI );
             }];
         }];
     }
@@ -125,6 +157,16 @@
 {
     return 80;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ReviewViewController *reviewVC = [[ReviewViewController alloc] init];
+    reviewVC.restaurant = self.restaurantViewModel.restaurantModels[indexPath.row];
+    [self.navigationController pushViewController:reviewVC animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
 
 #pragma mark TableView Datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -156,7 +198,16 @@
 
 -(void)thumbDownAction:(UIButton *)sender
 {
+    //根据要求，“踩”过得餐厅永远排在最后。("never considered as an option for dining.")
     PDLog(@"sender:%ld",(long)sender.tag);
+    Restaurant *restaurant = self.restaurantViewModel.restaurantModels[sender.tag];
+    [[LocalStorage sharedLocalStorage] addRestaurant:restaurant];
+    restaurant.thumbsDown = YES;
+    [[LocalStorage sharedLocalStorage] updateRestaurant:restaurant];
+    [self.restaurantViewModel resort];
+    [self.restaurantListView.restaurantList reloadData];
+
+    
 }
 
 @end

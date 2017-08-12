@@ -11,7 +11,6 @@ typedef void (^rightItemClickBlock)();
 
 @interface RestaurantListView : UIView
 
-@property(nonatomic,strong)UIButton *rightItem;
 @property(nonatomic,strong)UITableView *restaurantList;
 
 @property (nonatomic,copy) rightItemClickBlock clickHanlder;

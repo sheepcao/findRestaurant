@@ -83,7 +83,7 @@
     self.favoritePlaceLabel.y = 10;
     self.favoritePlaceLabel.width = PDSCREEN_W/2;
     self.favoritePlaceLabel.height = 30;
-    self.favoritePlaceLabel.text = @"可选地点:";
+    self.favoritePlaceLabel.text = @"点击选取地点:";
     self.favoritePlaceLabel.textColor = PDRGBColor(35, 35, 35);
     self.favoritePlaceLabel.font = PDFontWithWeight(21, UIFontWeightMedium);
     [self.topView addSubview:self.favoritePlaceLabel];
@@ -175,29 +175,6 @@
 
     }
     
-//    self.btnOne.transform = CGAffineTransformMakeScale(0.2, 0.2);
-//    self.btnTwo.transform = CGAffineTransformMakeScale(0.2, 0.2);
-//    
-//    self.img1.transform = CGAffineTransformMakeScale(1.4, 1.4);
-//    self.img2.transform = CGAffineTransformMakeScale(1.4, 1.4);
-
-//    [UIView animateWithDuration:0.2 animations:^{
-//        self.btnOne.transform = CGAffineTransformMakeScale(1.4, 1.4);
-//        self.btnTwo.transform = CGAffineTransformMakeScale(1.4, 1.4);
-//        self.img1.transform = CGAffineTransformMakeScale(0.7, 0.7);
-//        self.img2.transform = CGAffineTransformMakeScale(0.7, 0.7);
-//
-//    } completion:^(BOOL finished) {
-//        [UIView animateWithDuration:0.2 animations:^{
-//            self.btnOne.transform = CGAffineTransformIdentity;
-//            self.btnTwo.transform = CGAffineTransformIdentity;
-//
-//            
-//            self.img1.transform = CGAffineTransformIdentity;
-//            self.img2.transform = CGAffineTransformIdentity;
-//        }];
-//        
-//    }];
     
 }
 
@@ -210,7 +187,7 @@
     favoritePlaceLabel.y = 10;
     favoritePlaceLabel.width = 100;
     favoritePlaceLabel.height = 30;
-    favoritePlaceLabel.text = @"选取地点:";
+    favoritePlaceLabel.text = @"选中地点:";
     favoritePlaceLabel.textColor = PDRGBColor(35, 35, 35);
     favoritePlaceLabel.font = PDFontWithWeight(20, UIFontWeightMedium);
     [self.bottomView addSubview:favoritePlaceLabel];
@@ -238,7 +215,7 @@
     self.radiusLabel.y = 15 + mySlider.frame.origin.y + mySlider.frame.size.height;
     self.radiusLabel.width = 120;
     self.radiusLabel.height = 40;
-    self.radiusLabel.text = @"< 5.0 KM";
+    self.radiusLabel.text = @"5.0 KM";
     self.radiusLabel.textColor = PDRGBColor(22, 22, 22);
     self.radiusLabel.font = PDFontWithWeight(30, UIFontWeightLight);
     [self.bottomView addSubview:self.radiusLabel];
@@ -263,7 +240,7 @@
 -(void)sliderValueChanged:(UISlider *)sender
 {
     NSLog(@"sender value: %.1f",sender.value);
-    self.radiusLabel.text = [NSString stringWithFormat:@"< %.1f KM",sender.value];
+    self.radiusLabel.text = [NSString stringWithFormat:@"%.1f KM",sender.value];
 }
 
 @end

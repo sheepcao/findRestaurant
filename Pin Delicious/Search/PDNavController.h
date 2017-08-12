@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PDNavController : UINavigationController
-
+@property (nonatomic,strong) UIButton *rightButton;
 @end

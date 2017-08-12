@@ -15,7 +15,7 @@
     self = [super initWithFrame:CGRectMake(0, 0, PDSCREEN_W, PDSCREEN_H)];
     if (self) {
         self.backgroundColor = PDRGBColor(180, 180, 180);
-        [self addSearchButton];
+//        [self addSearchButton];
         if (itemclickHandler) {
             self.clickHanlder = itemclickHandler;
         }
@@ -29,16 +29,18 @@
     self.restaurantList = [[UITableView alloc] initWithFrame:self.frame style:UITableViewStylePlain];
     self.restaurantList.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.restaurantList.backgroundColor = self.backgroundColor;
-    self.restaurantList.allowsSelection = NO;
+//    self.restaurantList.allowsSelection = NO;
     [self addSubview:self.restaurantList];
 }
 
 -(void)addSearchButton
 {
     UIButton *rightItem = [[UIButton alloc]init];
-    self.rightItem = rightItem;
-    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
-    [win addSubview:rightItem];
+//    self.rightItem = rightItem;
+//    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
+//    [win addSubview:rightItem];
+//    PDNavController *navi = (PDNavController *)win.rootViewController;
+    
     rightItem.y = 20;
     rightItem.width = 45;
     rightItem.height = 45;

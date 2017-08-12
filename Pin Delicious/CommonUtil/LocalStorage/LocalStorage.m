@@ -51,8 +51,8 @@ static LocalStorage *_localStorage = nil;
     [_db open];
     
     // 初始化数据表
-    NSString *restaurantSql = @"CREATE TABLE 'restaurant' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'restaurant_id' VARCHAR(255),'thumbs_down' VARCHAR(255),'restaurant_name' VARCHAR(255)) ";
-    NSString *reviewSql = @"CREATE TABLE 'review' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'owner_id' VARCHAR(255),'review_id' VARCHAR(255),'review_content' VARCHAR(255),'review_score' VARCHAR(255),'review_date' VARCHAR(255)) ";
+    NSString *restaurantSql = @"CREATE TABLE IF NOT EXISTS 'restaurant' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'restaurant_id' VARCHAR(255),'thumbs_down' VARCHAR(255),'restaurant_name' VARCHAR(255)) ";
+    NSString *reviewSql = @"CREATE TABLE IF NOT EXISTS'review' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'owner_id' VARCHAR(255),'review_id' VARCHAR(255),'review_content' VARCHAR(255),'review_score' VARCHAR(255),'review_date' VARCHAR(255)) ";
     
     [_db executeUpdate:restaurantSql];
     [_db executeUpdate:reviewSql];

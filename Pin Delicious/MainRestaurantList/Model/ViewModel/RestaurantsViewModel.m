@@ -9,6 +9,7 @@
 #import "RestaurantsViewModel.h"
 #import "Restaurant.h"
 #import "AllDataReceivedModel.h"
+#import "LocalStorage.h"
 
 @implementation RestaurantsViewModel
 
@@ -45,21 +46,36 @@ typedef NS_ENUM(NSInteger, Order) {
 -(void)insertRestaurant:(Restaurant *)element InOrder:(Order)order ToArray:(NSMutableArray *)restaurantsArray
 {
     if (order == Ascending) {
-        __block NSUInteger index = 0;
+        NSUInteger index = 0;
         
-        [restaurantsArray enumerateObjectsUsingBlock:^(Restaurant *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        for (index = 0; index < restaurantsArray.count; index++) {
+            Restaurant *obj = restaurantsArray[index];
             if (obj.location.distance > element.location.distance) {
-                index = idx;
+                break;
             }
-        }];
+        }
         [restaurantsArray insertObject:element atIndex:index];
-        
         
     }else
     {
         //TODO: 本例子用不到，待实现
-    
     }
+    //把“踩”过的餐厅放到最后
+    [self resort];
+    
+}
+
+-(void)resort
+{
+    for ( int index = 0; index < self.restaurantModels.count; index++) {
+        Restaurant *obj =  self.restaurantModels[index];
+        if ([[LocalStorage sharedLocalStorage] getThumbsDown:obj]) {
+            [self.restaurantModels removeObject:obj];
+            [self.restaurantModels addObject:obj];
+            obj.thumbsDown = YES;
+        }
+    }
+   
 }
 
 @end

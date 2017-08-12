@@ -11,5 +11,8 @@
 @interface Location : NSObject
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic) NSUInteger distance;
+@property (nonatomic) NSString *formattedAddress;
+
+
 
 @end

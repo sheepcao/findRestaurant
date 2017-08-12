@@ -25,12 +25,6 @@
 
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 -(void)setupCellWith:(Restaurant *)restaurant
 {
     
@@ -41,7 +35,22 @@
     }
     NSString *address = [restaurant.location.address componentsSeparatedByString:@"|"][0];
     
+    if (!address) {
+        address = @"暂无地址";
+    }
+    
     self.distance.text = [NSString stringWithFormat:@"%@     < %@km",address,[self textFromDistance:restaurant.location.distance]];
+    if (restaurant.thumbsDown) {
+        [self.thumbButton setEnabled:NO];
+        [self.thumbButton setImage:[UIImage imageNamed:@"thumbed-down"] forState:UIControlStateNormal];
+        self.userInteractionEnabled = NO;
+    }else
+    {
+        [self.thumbButton setEnabled:YES];
+        [self.thumbButton setImage:[UIImage imageNamed:@"thumb-down"] forState:UIControlStateNormal];
+        self.userInteractionEnabled = YES;
+
+    }
 }
 
 -(NSString *)textFromDistance:(NSInteger)distance

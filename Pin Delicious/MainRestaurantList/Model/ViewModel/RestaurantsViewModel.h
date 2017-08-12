@@ -12,4 +12,5 @@
 
 @property(nonatomic,strong) NSMutableArray *restaurantModels;
 -(void)restaurantsFromJSONString:(NSString *)JSONString;
+-(void)resort;
 @end
