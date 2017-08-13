@@ -30,7 +30,7 @@
 {
     [super setHighlighted:highlighted animated:animated];
     if (self.highlighted) {
-        
+        //添加一点POP库的简单用法
         POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
         sprintAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1, 1)];
         sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -76,7 +76,7 @@
 }
 
 
-
+//添加动画，点击"踩"的 时候，cell掉落效果。
 - (void)animationForIndexPath:(NSIndexPath *)indexPath Complettion:(animationCompletion) completionHandler {
     float radians = 360;
     CALayer *layer = [[self.layer sublayers] objectAtIndex:0];

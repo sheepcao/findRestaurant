@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewViewController">
             <connections>
+                <outlet property="noReviewLabel" destination="eXr-h5-9g5" id="QQf-du-oB0"/>
                 <outlet property="ratingCountLabel" destination="sUO-Vd-r1l" id="csP-Xx-XPk"/>
                 <outlet property="reviewTableView" destination="Psa-iU-Fcd" id="kkf-MQ-DJ3"/>
                 <outlet property="scoreLabel" destination="siF-yQ-4kU" id="7BD-b3-pzG"/>
@@ -81,16 +82,28 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有评论 , 点击右上按钮抢沙发吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-h5-9g5">
+                    <rect key="frame" x="40" y="274" width="295" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="PjA-U9-JUn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="DL8-fe-4TH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Ta-WZ-yBX"/>
                 <constraint firstItem="DL8-fe-4TH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cad-1a-rCd"/>
                 <constraint firstAttribute="trailing" secondItem="Psa-iU-Fcd" secondAttribute="trailing" id="GHd-f3-JWx"/>
+                <constraint firstItem="eXr-h5-9g5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HlE-Ft-txF"/>
                 <constraint firstItem="DL8-fe-4TH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="MRb-Ql-OUM"/>
                 <constraint firstAttribute="bottom" secondItem="Psa-iU-Fcd" secondAttribute="bottom" constant="20" id="Ndy-Xl-erS"/>
                 <constraint firstItem="Psa-iU-Fcd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q6j-bw-u0K"/>
+                <constraint firstItem="eXr-h5-9g5" firstAttribute="top" secondItem="DL8-fe-4TH" secondAttribute="bottom" constant="50" id="edY-Px-oyb"/>
                 <constraint firstItem="Psa-iU-Fcd" firstAttribute="top" secondItem="DL8-fe-4TH" secondAttribute="bottom" constant="8" id="phv-Uf-vgc"/>
+                <constraint firstItem="eXr-h5-9g5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="yu2-hU-h9h"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="91.5"/>
         </view>

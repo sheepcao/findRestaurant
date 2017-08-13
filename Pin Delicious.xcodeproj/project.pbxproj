@@ -27,7 +27,6 @@
 		6560DB391F3EB706006ECED5 /* FoursquareCredentialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB261F3EB706006ECED5 /* FoursquareCredentialModel.m */; };
 		6560DB3A1F3EB706006ECED5 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB281F3EB706006ECED5 /* SearchModel.m */; };
 		6560DB3B1F3EB706006ECED5 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB2B1F3EB706006ECED5 /* SearchViewModel.m */; };
-		6560DB3E1F3EB9A2006ECED5 /* PDNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */; };
 		6560DB421F3EBC97006ECED5 /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB411F3EBC97006ECED5 /* RestaurantListViewController.m */; };
 		6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB441F3EBD42006ECED5 /* SearchViewController.m */; };
 		6560DB4A1F3EBD6E006ECED5 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB491F3EBD6E006ECED5 /* SearchView.m */; };
@@ -43,6 +42,7 @@
 		657388411F3FED0D0094A2CE /* NSDate+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 657388401F3FED0D0094A2CE /* NSDate+Custom.m */; };
 		657388451F3FFBE40094A2CE /* ReviewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 657388431F3FFBE40094A2CE /* ReviewsTableViewCell.m */; };
 		657388461F3FFBE40094A2CE /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657388441F3FFBE40094A2CE /* ReviewsTableViewCell.xib */; };
+		657388811F40565B0094A2CE /* PDNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657388801F40565B0094A2CE /* PDNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +83,6 @@
 		6560DB281F3EB706006ECED5 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		6560DB2A1F3EB706006ECED5 /* SearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
 		6560DB2B1F3EB706006ECED5 /* SearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
-		6560DB3C1F3EB9A2006ECED5 /* PDNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDNavController.h; path = Search/PDNavController.h; sourceTree = "<group>"; };
-		6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDNavController.m; path = Search/PDNavController.m; sourceTree = "<group>"; };
 		6560DB3F1F3EBB14006ECED5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6560DB401F3EBC97006ECED5 /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
 		6560DB411F3EBC97006ECED5 /* RestaurantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListViewController.m; sourceTree = "<group>"; };
@@ -113,6 +111,8 @@
 		657388421F3FFBE40094A2CE /* ReviewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewCell.h; sourceTree = "<group>"; };
 		657388431F3FFBE40094A2CE /* ReviewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewCell.m; sourceTree = "<group>"; };
 		657388441F3FFBE40094A2CE /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
+		6573887F1F40565B0094A2CE /* PDNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNavController.h; sourceTree = "<group>"; };
+		657388801F40565B0094A2CE /* PDNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNavController.m; sourceTree = "<group>"; };
 		B83C218B8CDAC4FD08805ABE /* libPods-Pin Delicious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pin Delicious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8040997DE6122307EEE72A9 /* Pods-Pin Delicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pin Delicious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,8 +174,6 @@
 				6560DB221F3EB706006ECED5 /* Search */,
 				6560DAE31F3EB3CE006ECED5 /* AppDelegate.h */,
 				6560DAE41F3EB3CE006ECED5 /* AppDelegate.m */,
-				6560DB3C1F3EB9A2006ECED5 /* PDNavController.h */,
-				6560DB3D1F3EB9A2006ECED5 /* PDNavController.m */,
 				6560DB3F1F3EBB14006ECED5 /* PrefixHeader.pch */,
 				6560DAE91F3EB3CE006ECED5 /* Main.storyboard */,
 				6560DAEC1F3EB3CE006ECED5 /* Assets.xcassets */,
@@ -202,7 +200,6 @@
 				6560DAFC1F3EB706006ECED5 /* JSONHelper */,
 				6560DAFF1F3EB706006ECED5 /* LocalStorage */,
 				6560DB021F3EB706006ECED5 /* NetworkingManager */,
-				6560DB051F3EB706006ECED5 /* Presenter */,
 			);
 			path = CommonUtil;
 			sourceTree = "<group>";
@@ -232,13 +229,6 @@
 				6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */,
 			);
 			path = NetworkingManager;
-			sourceTree = "<group>";
-		};
-		6560DB051F3EB706006ECED5 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		6560DB081F3EB706006ECED5 /* MainRestaurantList */ = {
@@ -392,6 +382,8 @@
 		6560DB4B1F3EC0F9006ECED5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6573887F1F40565B0094A2CE /* PDNavController.h */,
+				657388801F40565B0094A2CE /* PDNavController.m */,
 				6560DB4C1F3EC0F9006ECED5 /* PDEasyMacro.h */,
 				6560DB4D1F3EC0F9006ECED5 /* UIView+Frame.h */,
 				6560DB4E1F3EC0F9006ECED5 /* UIView+Frame.m */,
@@ -581,7 +573,6 @@
 			files = (
 				6560DB781F3F7CC3006ECED5 /* PublishReviewViewController.m in Sources */,
 				657388451F3FFBE40094A2CE /* ReviewsTableViewCell.m in Sources */,
-				6560DB3E1F3EB9A2006ECED5 /* PDNavController.m in Sources */,
 				6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */,
 				6560DB421F3EBC97006ECED5 /* RestaurantListViewController.m in Sources */,
 				6560DB701F3F5E5F006ECED5 /* XHStarRateView.m in Sources */,
@@ -596,6 +587,7 @@
 				6560DB321F3EB706006ECED5 /* Categories.m in Sources */,
 				6560DB311F3EB706006ECED5 /* AllDataReceivedModel.m in Sources */,
 				6560DB3B1F3EB706006ECED5 /* SearchViewModel.m in Sources */,
+				657388811F40565B0094A2CE /* PDNavController.m in Sources */,
 				6560DB641F3F5C37006ECED5 /* ReviewViewController.m in Sources */,
 				6560DB331F3EB706006ECED5 /* CategoryIcon.m in Sources */,
 				657388411F3FED0D0094A2CE /* NSDate+Custom.m in Sources */,

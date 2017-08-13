@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *starsView;
 @property (weak, nonatomic) IBOutlet UILabel *ratingCountLabel;
 @property (weak, nonatomic) IBOutlet UITableView *reviewTableView;
+@property (weak, nonatomic) IBOutlet UILabel *noReviewLabel;
 
 @property (strong, nonatomic) NSArray *reviewArray;
 @property (nonatomic,strong) ReviewsTableViewCell *prototypeCell;
@@ -37,10 +38,13 @@
     [self.reviewTableView registerNib:[UINib nibWithNibName:@"ReviewsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"reviewCell"];
     self.reviewTableView.estimatedRowHeight = 100;
     self.prototypeCell = [self.reviewTableView dequeueReusableCellWithIdentifier:@"reviewCell"];
+    [self.noReviewLabel setHidden:YES];
+
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.noReviewLabel setHidden:YES];
     [self changeRightButton];
     [self setupScoreFileds];
     
@@ -64,16 +68,20 @@
     if(navi.rightButton)
     {
         [navi.rightButton removeFromSuperview];
+        self.navigationItem.rightBarButtonItem =nil;
     }
     navi.rightButton = publishBtn;
-    [navi.navigationBar addSubview:publishBtn];
     //添加空的右侧按钮，从而缩短titleView的宽度
     UIBarButtonItem *emptyRight = [[UIBarButtonItem alloc] initWithTitle:@"           " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.rightBarButtonItem = emptyRight;
+    [navi.navigationBar addSubview:publishBtn];
+
 }
 
 -(void)rightButtonClick
 {
+    NSLog(@"123");
+
     PublishReviewViewController *publishVC = [[PublishReviewViewController alloc] init];
     publishVC.restaurant = self.restaurant;
     [self.navigationController pushViewController:publishVC animated:YES];
@@ -98,6 +106,9 @@
     
     if (reviews.count > 0) {
         averageScore = totalscore/reviews.count;
+    }else
+    {
+        [self.noReviewLabel setHidden:NO];
     }
     [self setupStarViewWithScore:averageScore];
     

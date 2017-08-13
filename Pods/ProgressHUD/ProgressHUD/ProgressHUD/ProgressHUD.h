@@ -29,6 +29,7 @@
 + (ProgressHUD *)shared;
 
 + (void)dismiss;
++ (void)present:(NSString *)status;
 
 + (void)show:(NSString *)status;
 + (void)show:(NSString *)status Interaction:(BOOL)Interaction;
