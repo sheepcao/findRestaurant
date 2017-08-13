@@ -12,6 +12,7 @@
 
 
 
+
 @interface LocalStorage : NSObject
 
 @property(nonatomic,strong) Restaurant *restaurant;

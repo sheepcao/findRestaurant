@@ -171,19 +171,14 @@
 #pragma mark TableView Datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //指定cellIdentifier为自定义的cell
     static NSString *CellIdentifier = @"restaurantCell";
-    //自定义cell类
     restaurantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //通过xib的名称加载自定义的cell
         cell = [[[NSBundle mainBundle] loadNibNamed:@"restaurantTableViewCell" owner:self options:nil] lastObject];
     }
     
-    //添加测试数据
     [cell setupCellWith:self.restaurantViewModel.restaurantModels[indexPath.row]];
     cell.thumbButton.tag = indexPath.row;
-    //测试图片
     [cell.thumbButton addTarget:self action:@selector(thumbDownAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }

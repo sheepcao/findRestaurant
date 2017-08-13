@@ -9,17 +9,32 @@
 #import "PublishReviewViewController.h"
 #import "PDNavController.h"
 #import "XHStarRateView.h"
+#import "Review.h"
+#import "LocalStorage.h"
+#import "Restaurant.h"
+#import "NSDate+Custom.h"
 
-@interface PublishReviewViewController ()
+@interface PublishReviewViewController ()<UITextViewDelegate>
+
+@property (nonatomic,strong) Review *currentReview;
 
 @end
 
 @implementation PublishReviewViewController
 
+-(Review *)currentReview
+{
+    if (!_currentReview) {
+        _currentReview = [[Review alloc] init];
+    }
+    return _currentReview;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"发 言";
+    
     [self setupStarView];
     [self setupTextView];
 
@@ -34,6 +49,7 @@
     NSArray * buttonsArray = [NSArray arrayWithObjects:btnSpace,doneButton,nil];
     [topView setItems:buttonsArray];
     [self.reviewTextView setInputAccessoryView:topView];
+    self.reviewTextView.delegate = self;
 }
 -(void)dismissKeyBoard
 {
@@ -68,12 +84,15 @@
 
 -(void)rightButtonClick
 {
-    
+    [self publishReviewActionWithModel:self.currentReview];
 }
 
 -(void)setupStarView
 {
-    XHStarRateView *starRateView = [[XHStarRateView alloc] initWithFrame:CGRectMake(0, 20, 200, 40) numberOfStars:5 rateStyle:WholeStar isAnination:NO finish:^(CGFloat currentScore) {
+    PDWeakSelf(weakSelf);
+    XHStarRateView *starRateView = [[XHStarRateView alloc] initWithFrame:CGRectMake(0, 23, 200, 30) numberOfStars:5 rateStyle:WholeStar isAnination:NO finish:^(CGFloat currentScore) {
+        PDStrongSelf(strongSelf);
+        strongSelf.currentReview.score = currentScore;
         PDLog(@"%f",currentScore);
         
     }];
@@ -85,14 +104,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)publishReviewActionWithModel:(Review *)model
+{
+    if (!model.content || [[model.content stringByReplacingOccurrencesOfString:@" " withString:@""] isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:@"评论内容不能是空的" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    if (model.score < 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:@"请点击五角星评分" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    [[LocalStorage sharedLocalStorage] addRestaurant:self.restaurant];
+    model.date = [NSDate getCurrentTime];
+    [[LocalStorage sharedLocalStorage] addReview:model toRestaurant:self.restaurant];
+    [ProgressHUD showSuccess:@"发表成功！" Interaction:NO];
+    double length = @"发表成功！".length;
+    NSTimeInterval sleep = length * 0.04 + 1.0;
+    [self performSelector:@selector(goBack) withObject:nil afterDelay:sleep];
+    
 }
-*/
+-(void)goBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+
+
+#pragma mark UITextView Delegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.currentReview.content = textView.text;
+}
 @end

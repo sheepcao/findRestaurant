@@ -12,6 +12,7 @@
 
 #import "Restaurant.h"
 #import "Review.h"
+
 static LocalStorage *_localStorage = nil;
 
 @interface LocalStorage(){
@@ -34,6 +35,7 @@ static LocalStorage *_localStorage = nil;
     
 }
 
+//TODO:Could add some error handlings for DB process.
 
 -(void)initDataBase{
     // 获得Documents目录路径
@@ -43,7 +45,7 @@ static LocalStorage *_localStorage = nil;
     // 文件路径
     
     NSString *filePath = [documentsPath stringByAppendingPathComponent:@"model.sqlite"];
-    
+    PDLog(@"DB filePath: %@",filePath);
     // 实例化FMDataBase对象
     
     _db = [FMDatabase databaseWithPath:filePath];
@@ -66,7 +68,15 @@ static LocalStorage *_localStorage = nil;
 - (void)addRestaurant:(Restaurant *)restaurant{
     [_db open];
     
-    [_db executeUpdate:@"INSERT INTO restaurant(restaurant_id,thumbs_down,restaurant_name)VALUES(?,?,?)",restaurant.id, @(restaurant.thumbsDown),restaurant.name];
+    FMResultSet *res = [_db executeQuery:@"SELECT * FROM restaurant where restaurant_id = ?",restaurant.id];
+    
+    if ([res next]) {
+        [self updateRestaurant:restaurant];
+    }else
+    {
+        [_db executeUpdate:@"INSERT INTO restaurant(restaurant_id,thumbs_down,restaurant_name)VALUES(?,?,?)",restaurant.id, @(restaurant.thumbsDown),restaurant.name];
+    }
+    
  
     [_db close];
     
@@ -115,7 +125,7 @@ static LocalStorage *_localStorage = nil;
     //根据restaurant是否拥有review来添加review_id
     NSNumber *maxID = @(0);
     
-    FMResultSet *res = [_db executeQuery:[NSString stringWithFormat:@"SELECT * FROM review where owner_id = %@ ",restaurant.id]];
+    FMResultSet *res = [_db executeQuery:@"SELECT * FROM review where owner_id = ?",restaurant.id];
     
     while ([res next]) {
         if ([maxID integerValue] < [[res stringForColumn:@"review_id"] integerValue]) {
@@ -125,8 +135,8 @@ static LocalStorage *_localStorage = nil;
     }
     maxID = @([maxID integerValue] + 1);
     
-    [_db executeUpdate:@"INSERT INTO review(own_id,review_id,review_content,review_score,review_date)VALUES(?,?,?,?,?)",restaurant.id,maxID,review.content,@(review.score),review.date];
     
+    [_db executeUpdate:@"INSERT INTO review(owner_id,review_id,review_content,review_score,review_date)VALUES(?,?,?,?,?)",restaurant.id,maxID,review.content,@(review.score),review.date];
     
     [_db close];
     
@@ -138,7 +148,7 @@ static LocalStorage *_localStorage = nil;
 - (void)deleteReview:(Review *)review fromRestaurant:(Restaurant *)restaurant{
     [_db open];
     
-    [_db executeUpdate:@"DELETE FROM review WHERE own_id = ?  and review_id = ? ",restaurant.id,review.reviewID];
+    [_db executeUpdate:@"DELETE FROM review WHERE owner_id = ?  and review_id = ? ",restaurant.id,review.reviewID];
     
     [_db close];
     
@@ -152,7 +162,7 @@ static LocalStorage *_localStorage = nil;
     [_db open];
     NSMutableArray  *reviewArray = [[NSMutableArray alloc] init];
     
-    FMResultSet *res = [_db executeQuery:[NSString stringWithFormat:@"SELECT * FROM review where own_id = %@",restaurant.id]];
+    FMResultSet *res = [_db executeQuery:@"SELECT * FROM review where owner_id = ?",restaurant.id];
     while ([res next]) {
         Review *review = [[Review alloc] init];
         review.reviewID = @([[res stringForColumn:@"review_id"] integerValue]);
