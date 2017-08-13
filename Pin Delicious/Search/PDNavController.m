@@ -22,7 +22,6 @@
     [navBar setBarTintColor:PDRGBColor(200, 28, 30)];
     NSDictionary * dict = [NSDictionary dictionaryWithObject:PDRGBColor(230, 230, 230) forKey:NSForegroundColorAttributeName];
     navBar.titleTextAttributes = dict;
-    
     navBar.tintColor = PDRGBColor(200, 200, 200);
 }
 

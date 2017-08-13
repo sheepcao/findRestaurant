@@ -16,7 +16,6 @@
 		6560DB2D1F3EB706006ECED5 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAFE1F3EB706006ECED5 /* JSONHelper.m */; };
 		6560DB2E1F3EB706006ECED5 /* LocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB011F3EB706006ECED5 /* LocalStorage.m */; };
 		6560DB2F1F3EB706006ECED5 /* FoursquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */; };
-		6560DB301F3EB706006ECED5 /* ScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB071F3EB706006ECED5 /* ScreenPresenter.m */; };
 		6560DB311F3EB706006ECED5 /* AllDataReceivedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB0C1F3EB706006ECED5 /* AllDataReceivedModel.m */; };
 		6560DB321F3EB706006ECED5 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB0E1F3EB706006ECED5 /* Categories.m */; };
 		6560DB331F3EB706006ECED5 /* CategoryIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DB101F3EB706006ECED5 /* CategoryIcon.m */; };
@@ -62,8 +61,6 @@
 		6560DB011F3EB706006ECED5 /* LocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorage.m; sourceTree = "<group>"; };
 		6560DB031F3EB706006ECED5 /* FoursquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPIClient.h; sourceTree = "<group>"; };
 		6560DB041F3EB706006ECED5 /* FoursquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPIClient.m; sourceTree = "<group>"; };
-		6560DB061F3EB706006ECED5 /* ScreenPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenPresenter.h; sourceTree = "<group>"; };
-		6560DB071F3EB706006ECED5 /* ScreenPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenPresenter.m; sourceTree = "<group>"; };
 		6560DB0B1F3EB706006ECED5 /* AllDataReceivedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllDataReceivedModel.h; sourceTree = "<group>"; };
 		6560DB0C1F3EB706006ECED5 /* AllDataReceivedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllDataReceivedModel.m; sourceTree = "<group>"; };
 		6560DB0D1F3EB706006ECED5 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
@@ -240,8 +237,6 @@
 		6560DB051F3EB706006ECED5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				6560DB061F3EB706006ECED5 /* ScreenPresenter.h */,
-				6560DB071F3EB706006ECED5 /* ScreenPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -585,7 +580,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6560DB781F3F7CC3006ECED5 /* PublishReviewViewController.m in Sources */,
-				6560DB301F3EB706006ECED5 /* ScreenPresenter.m in Sources */,
 				657388451F3FFBE40094A2CE /* ReviewsTableViewCell.m in Sources */,
 				6560DB3E1F3EB9A2006ECED5 /* PDNavController.m in Sources */,
 				6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */,

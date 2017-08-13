@@ -20,7 +20,7 @@
 
 -(NSArray *)favoritePlaces
 {
-    // could fetch Places thru any approach in this getter. The current UI design can support no more than 6 places.
+    // could fetch Places thru any approach in this getter. The current UI design can support no more than 3 places.
     return @[@"Essex Office",@"复旦大学"];
 }
 

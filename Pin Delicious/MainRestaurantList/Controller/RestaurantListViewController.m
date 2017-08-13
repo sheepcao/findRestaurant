@@ -16,6 +16,7 @@
 #import "ReviewViewController.h"
 #import "PDNavController.h"
 
+
 @interface RestaurantListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) SearchViewController *searchViewController;
 @property (nonatomic,strong) RestaurantListView *restaurantListView;
@@ -161,10 +162,15 @@
 {
     ReviewViewController *reviewVC = [[ReviewViewController alloc] init];
     reviewVC.restaurant = self.restaurantViewModel.restaurantModels[indexPath.row];
+
     [self.navigationController pushViewController:reviewVC animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(restaurantTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [cell animationForIndexPath:indexPath];
+//}
 
 
 
@@ -200,9 +206,35 @@
     restaurant.thumbsDown = YES;
     [[LocalStorage sharedLocalStorage] updateRestaurant:restaurant];
     [self.restaurantViewModel resort];
-    [self.restaurantListView.restaurantList reloadData];
+//    [self.restaurantListView.restaurantList reloadData];
+
+    PDWeakSelf(weakSelf);
+    restaurantTableViewCell *cell = [self findCellView:sender.superview];
+    if (cell) {
+        [cell animationForIndexPath:[NSIndexPath indexPathForRow:sender.tag inSection:0] Complettion:^{
+            PDStrongSelf(strongSelf);
+            [strongSelf.restaurantListView.restaurantList reloadData];
+        }];
+    }
 
     
+}
+
+-(restaurantTableViewCell *)findCellView:(UIView *)view
+{
+    restaurantTableViewCell *cell;
+    if ([view isKindOfClass:[UITableView class]]) {
+        return nil;
+    }
+    
+    if ([view isKindOfClass:[restaurantTableViewCell class]]) {
+        return (restaurantTableViewCell *)view;
+    }else
+    {
+       cell = [self findCellView:view.superview];
+    }
+    
+    return cell;
 }
 
 @end

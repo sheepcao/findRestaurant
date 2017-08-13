@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "if_Food_572824 (1).png",
       "scale" : "2x"
     },
     {
@@ -23,25 +24,25 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_restaurant 80.png",
+      "filename" : "restaurant_80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_restaurant120.png",
+      "filename" : "restaurant_120-1.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_restaurant120-1.png",
+      "filename" : "restaurant_120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_restaurant 180.png",
+      "filename" : "restaurant_180.png",
       "scale" : "3x"
     }
   ],

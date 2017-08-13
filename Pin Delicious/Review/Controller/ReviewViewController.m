@@ -68,7 +68,7 @@
     navi.rightButton = publishBtn;
     [navi.navigationBar addSubview:publishBtn];
     //添加空的右侧按钮，从而缩短titleView的宽度
-    UIBarButtonItem *emptyRight = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    UIBarButtonItem *emptyRight = [[UIBarButtonItem alloc] initWithTitle:@"           " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.rightBarButtonItem = emptyRight;
 }
 

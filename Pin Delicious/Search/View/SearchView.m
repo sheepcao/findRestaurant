@@ -57,7 +57,7 @@
 
     self.topView.x = 0;
     self.topView.y = 0;
-    self.topView.height = PDSCREEN_H/2;
+    self.topView.height = PDSCREEN_H /3;
     self.topView.width = self.width;
     [self setupTopViewWith:self.favoritePlaces];
     

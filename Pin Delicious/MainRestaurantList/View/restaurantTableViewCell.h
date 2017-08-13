@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
 
-@interface restaurantTableViewCell : UITableViewCell
+typedef void (^animationCompletion)();
+
+@interface restaurantTableViewCell : UITableViewCell<CAAnimationDelegate>
 @property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet UIButton *thumbButton;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantName;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantCategory;
 @property (weak, nonatomic) IBOutlet UILabel *distance;
+@property (copy, nonatomic) animationCompletion animationHandler;
 
 
 -(void)setupCellWith:(Restaurant *)restaurant;
+-(void)animationForIndexPath:(NSIndexPath *)indexPath Complettion:(animationCompletion)completionHandler;
 @end
