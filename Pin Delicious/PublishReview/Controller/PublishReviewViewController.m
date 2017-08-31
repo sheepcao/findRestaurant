@@ -34,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"发 言";
+    [self.view setFrame:CGRectMake(0, 0, PDSCREEN_W, PDSCREEN_H)];
+
     
     [self setupStarView];
     [self setupTextView];

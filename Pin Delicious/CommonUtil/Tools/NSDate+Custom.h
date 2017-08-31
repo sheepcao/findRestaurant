@@ -10,4 +10,6 @@
 
 @interface NSDate (Custom)
 + (NSString *)getCurrentTime;
+- (BOOL) isTypicallyWeekend;
+
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2017 ericcao. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking.h>
 
 @interface FoursquareAPIClient : AFHTTPSessionManager
 

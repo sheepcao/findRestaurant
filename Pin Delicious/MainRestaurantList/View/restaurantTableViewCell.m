@@ -85,7 +85,6 @@
     CABasicAnimation *animation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     animation.fromValue =@DEGREES_TO_RADIANS(radians);
     animation.toValue = @DEGREES_TO_RADIANS(0);
-//
     // Opacity Animation;
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeAnimation.fromValue = @1.0f;

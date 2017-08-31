@@ -15,12 +15,16 @@
 #import "LocalStorage.h"
 #import "ReviewViewController.h"
 #import "PDNavController.h"
+#import "FBKVOController.h"
+
 
 
 @interface RestaurantListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) SearchViewController *searchViewController;
 @property (nonatomic,strong) RestaurantListView *restaurantListView;
 @property (nonatomic,strong) RestaurantsViewModel *restaurantViewModel;
+@property (nonatomic,strong) FBKVOController *KVOController;
+
 @property(nonatomic,strong)UIButton *rightItem;
 
 @end
@@ -42,11 +46,15 @@
 
     
     [self addSearch];
+
     self.restaurantViewModel = [[RestaurantsViewModel alloc] init];
     self.searchViewController.searchViewModel = [[SearchViewModel alloc] initWithLatitude:@"31.194221" Longitude:@"121.517046" Radius:@"5000"];
    
     //TODO: 这里 Foursquare API有问题， 搜索半径是a米的话，会搜出来少数大于a米的结果
     [self doSearchActionOnFirstLaunch:YES WithSearchViewModel:self.searchViewController.searchViewModel];
+    
+    [self setupObservers];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -111,10 +119,11 @@
         }else
         {
             PDStrongSelf(strongSelf);
-//            PDLog(@"successJson-:%@",successJson);
+            PDLog(@"successJson-:%@",successJson);
             [strongSelf.restaurantViewModel restaurantsFromJSONString:successJson];
-            [strongSelf.restaurantListView.restaurantList reloadData];
             PDLog(@"%@",strongSelf.restaurantViewModel);
+//            [strongSelf.restaurantListView.restaurantList reloadData];
+
             [ProgressHUD dismiss];
 
             
@@ -122,6 +131,25 @@
     }];
 
 }
+#pragma mark -
+#pragma mark KVO on view model to update the view
+- (void)setupObservers
+{
+    self.KVOController = [FBKVOController controllerWithObserver:self];
+
+    PDWeakSelf(weakSelf);
+    [self.KVOController observe:self.restaurantViewModel keyPath:@"restaurantModels" options:NSKeyValueObservingOptionNew block:^(id observer, id object, NSDictionary *change) {
+        NSLog(@"setupObservers");
+        PDStrongSelf(strongSelf);
+        [strongSelf.restaurantListView.restaurantList reloadData];
+    }];
+    
+}
+- (void)dealloc
+{
+    [_KVOController unobserveAll];
+}
+#pragma mark end -
 
 - (void)rightItemClick{
     
@@ -168,11 +196,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(restaurantTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [cell animationForIndexPath:indexPath];
-//}
-
-
 
 #pragma mark TableView Datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -206,7 +229,6 @@
     restaurant.thumbsDown = YES;
     [[LocalStorage sharedLocalStorage] updateRestaurant:restaurant];
     [self.restaurantViewModel resort];
-//    [self.restaurantListView.restaurantList reloadData];
 
     PDWeakSelf(weakSelf);
     restaurantTableViewCell *cell = [self findCellView:sender.superview];

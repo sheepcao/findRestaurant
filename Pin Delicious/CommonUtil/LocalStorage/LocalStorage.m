@@ -13,7 +13,6 @@
 #import "Restaurant.h"
 #import "Review.h"
 
-static LocalStorage *_localStorage = nil;
 
 @interface LocalStorage(){
     FMDatabase  *_db;
@@ -25,7 +24,7 @@ static LocalStorage *_localStorage = nil;
 @implementation LocalStorage
 
 +(instancetype)sharedLocalStorage{
-    
+    static LocalStorage *_localStorage = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _localStorage = [[LocalStorage alloc] init];

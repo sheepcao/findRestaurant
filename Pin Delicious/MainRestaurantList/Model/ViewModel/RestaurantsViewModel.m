@@ -28,19 +28,24 @@ typedef NS_ENUM(NSInteger, Order) {
 }
 
 
--(void)restaurantsFromJSONString:(NSString *)JSONString
+-(NSArray *)restaurantsFromJSONString:(NSString *)JSONString
 {
-    self.restaurantModels = [[NSMutableArray alloc] initWithCapacity:50];
-    
+//    self.restaurantModels = [[NSMutableArray alloc] initWithCapacity:50];
+    NSMutableArray *restaurantsArray = [[NSMutableArray alloc] initWithCapacity:50];
+
     AllDataReceivedModel *allDataModel = [AllDataReceivedModel responseDataWithJSONString:JSONString];
     NSArray *allRestaurants = allDataModel.response.venues;
     __weak __typeof(self) weakSelf = self;
     [allRestaurants enumerateObjectsUsingBlock:^(Restaurant *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         __strong __typeof(self) strongSelf = weakSelf;
-        [strongSelf insertRestaurant:obj InOrder:Ascending ToArray:strongSelf.restaurantModels];
+        [strongSelf insertRestaurant:obj InOrder:Ascending ToArray:restaurantsArray];
         
     }];
+    self.restaurantModels = restaurantsArray;
+    [self resort];
     
+    return [NSArray arrayWithArray:self.restaurantModels];
+
 }
 
 -(void)insertRestaurant:(Restaurant *)element InOrder:(Order)order ToArray:(NSMutableArray *)restaurantsArray
@@ -61,7 +66,6 @@ typedef NS_ENUM(NSInteger, Order) {
         //TODO: 本例子用不到，待实现
     }
     //把“踩”过的餐厅放到最后
-    [self resort];
     
 }
 

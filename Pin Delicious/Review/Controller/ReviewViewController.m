@@ -31,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.view setFrame:CGRectMake(0, 0, PDSCREEN_W, PDSCREEN_H)];
     self.title = self.restaurant.name;
     self.reviewTableView.delegate = self;
     self.reviewTableView.dataSource = self;
@@ -80,8 +82,6 @@
 
 -(void)rightButtonClick
 {
-    NSLog(@"123");
-
     PublishReviewViewController *publishVC = [[PublishReviewViewController alloc] init];
     publishVC.restaurant = self.restaurant;
     [self.navigationController pushViewController:publishVC animated:YES];

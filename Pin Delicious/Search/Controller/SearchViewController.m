@@ -82,5 +82,17 @@
 -(void)selectPlace:(UIButton *)sender
 {
     self.searchView.place.text = self.searchViewModel.favoritePlaces[sender.tag];
+    
+    sender.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    [UIView animateWithDuration:0.2 animations:^{
+        sender.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2 animations:^{
+            sender.transform = CGAffineTransformIdentity;
+        }];
+        
+    }];
+
 }
 @end

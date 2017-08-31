@@ -11,6 +11,6 @@
 @interface RestaurantsViewModel : NSObject
 
 @property(nonatomic,strong) NSMutableArray *restaurantModels;
--(void)restaurantsFromJSONString:(NSString *)JSONString;
+-(NSArray *)restaurantsFromJSONString:(NSString *)JSONString;
 -(void)resort;
 @end

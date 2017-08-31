@@ -19,7 +19,6 @@
 
 @property(nonatomic,strong) UILabel *favoritePlaceLabel;
 @property(nonatomic,strong) NSMutableArray *imageArray;
-//@property(nonatomic,strong)UIImageView *img2;
 
 
 

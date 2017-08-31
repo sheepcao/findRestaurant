@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5ABCF37B54B2F49CB68DD335 /* libPods-Pin Delicious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C218B8CDAC4FD08805ABE /* libPods-Pin Delicious.a */; };
+		6527EA121F4D60D200A9FF8D /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6527EA111F4D60D200A9FF8D /* FBKVOController.m */; };
+		6527EA1E1F55137E00A9FF8D /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6527EA1D1F55137E00A9FF8D /* NavigationControllerDelegate.m */; };
+		6527EA271F5513DB00A9FF8D /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6527EA261F5513DB00A9FF8D /* PopAnimator.m */; };
+		6527EA2A1F551D4700A9FF8D /* PushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6527EA291F551D4700A9FF8D /* PushAnimator.m */; };
+		6527EA431F557C0300A9FF8D /* Pin_DeliciousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6527EA421F557C0300A9FF8D /* Pin_DeliciousTests.m */; };
+		6527EA4D1F557F5700A9FF8D /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 6527EA4C1F557F5700A9FF8D /* restaurants.json */; };
+		65397C531F56E4DB008C2A1D /* CGXCachingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397C521F56E4DB008C2A1D /* CGXCachingImageView.m */; };
 		6560DAE21F3EB3CE006ECED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAE11F3EB3CE006ECED5 /* main.m */; };
 		6560DAE51F3EB3CE006ECED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560DAE41F3EB3CE006ECED5 /* AppDelegate.m */; };
 		6560DAEB1F3EB3CE006ECED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6560DAE91F3EB3CE006ECED5 /* Main.storyboard */; };
@@ -45,8 +52,32 @@
 		657388811F40565B0094A2CE /* PDNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657388801F40565B0094A2CE /* PDNavController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6527EA451F557C0300A9FF8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6560DAD51F3EB3CE006ECED5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6560DADC1F3EB3CE006ECED5;
+			remoteInfo = "Pin Delicious";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		320A4032CB63326C0743B07E /* Pods-Pin Delicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pin Delicious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pin Delicious/Pods-Pin Delicious.debug.xcconfig"; sourceTree = "<group>"; };
+		6527EA101F4D60D200A9FF8D /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		6527EA111F4D60D200A9FF8D /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		6527EA1C1F55137E00A9FF8D /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		6527EA1D1F55137E00A9FF8D /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		6527EA251F5513DB00A9FF8D /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
+		6527EA261F5513DB00A9FF8D /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
+		6527EA281F551D4700A9FF8D /* PushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimator.h; sourceTree = "<group>"; };
+		6527EA291F551D4700A9FF8D /* PushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimator.m; sourceTree = "<group>"; };
+		6527EA401F557C0300A9FF8D /* Pin DeliciousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pin DeliciousTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6527EA421F557C0300A9FF8D /* Pin_DeliciousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pin_DeliciousTests.m; sourceTree = "<group>"; };
+		6527EA441F557C0300A9FF8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6527EA4C1F557F5700A9FF8D /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
+		65397C511F56E4DB008C2A1D /* CGXCachingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXCachingImageView.h; sourceTree = "<group>"; };
+		65397C521F56E4DB008C2A1D /* CGXCachingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXCachingImageView.m; sourceTree = "<group>"; };
 		6560DADD1F3EB3CE006ECED5 /* Pin Delicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pin Delicious.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6560DAE11F3EB3CE006ECED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6560DAE31F3EB3CE006ECED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +149,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6527EA3D1F557C0300A9FF8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6560DADA1F3EB3CE006ECED5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,10 +184,60 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6527EA0F1F4D60D200A9FF8D /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				6527EA101F4D60D200A9FF8D /* FBKVOController.h */,
+				6527EA111F4D60D200A9FF8D /* FBKVOController.m */,
+			);
+			path = FBKVOController;
+			sourceTree = "<group>";
+		};
+		6527EA1F1F55138900A9FF8D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6573887F1F40565B0094A2CE /* PDNavController.h */,
+				657388801F40565B0094A2CE /* PDNavController.m */,
+				6527EA1C1F55137E00A9FF8D /* NavigationControllerDelegate.h */,
+				6527EA1D1F55137E00A9FF8D /* NavigationControllerDelegate.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		6527EA241F5513DB00A9FF8D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				6527EA281F551D4700A9FF8D /* PushAnimator.h */,
+				6527EA291F551D4700A9FF8D /* PushAnimator.m */,
+				6527EA251F5513DB00A9FF8D /* PopAnimator.h */,
+				6527EA261F5513DB00A9FF8D /* PopAnimator.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		6527EA411F557C0300A9FF8D /* Pin DeliciousTests */ = {
+			isa = PBXGroup;
+			children = (
+				6527EA421F557C0300A9FF8D /* Pin_DeliciousTests.m */,
+				6527EA441F557C0300A9FF8D /* Info.plist */,
+			);
+			path = "Pin DeliciousTests";
+			sourceTree = "<group>";
+		};
+		65397C4A1F56B908008C2A1D /* CGXImageView */ = {
+			isa = PBXGroup;
+			children = (
+				65397C511F56E4DB008C2A1D /* CGXCachingImageView.h */,
+				65397C521F56E4DB008C2A1D /* CGXCachingImageView.m */,
+			);
+			path = CGXImageView;
+			sourceTree = "<group>";
+		};
 		6560DAD41F3EB3CE006ECED5 = {
 			isa = PBXGroup;
 			children = (
 				6560DADF1F3EB3CE006ECED5 /* Pin Delicious */,
+				6527EA411F557C0300A9FF8D /* Pin DeliciousTests */,
 				6560DADE1F3EB3CE006ECED5 /* Products */,
 				36A67C9E237157CA842587BC /* Pods */,
 				21F9D0200681B2532A3766B1 /* Frameworks */,
@@ -160,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				6560DADD1F3EB3CE006ECED5 /* Pin Delicious.app */,
+				6527EA401F557C0300A9FF8D /* Pin DeliciousTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +276,7 @@
 		6560DAE01F3EB3CE006ECED5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6527EA4C1F557F5700A9FF8D /* restaurants.json */,
 				6560DAE11F3EB3CE006ECED5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -200,6 +290,7 @@
 				6560DAFC1F3EB706006ECED5 /* JSONHelper */,
 				6560DAFF1F3EB706006ECED5 /* LocalStorage */,
 				6560DB021F3EB706006ECED5 /* NetworkingManager */,
+				6527EA241F5513DB00A9FF8D /* Animation */,
 			);
 			path = CommonUtil;
 			sourceTree = "<group>";
@@ -382,8 +473,8 @@
 		6560DB4B1F3EC0F9006ECED5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6573887F1F40565B0094A2CE /* PDNavController.h */,
-				657388801F40565B0094A2CE /* PDNavController.m */,
+				65397C4A1F56B908008C2A1D /* CGXImageView */,
+				6527EA1F1F55138900A9FF8D /* Navigation */,
 				6560DB4C1F3EC0F9006ECED5 /* PDEasyMacro.h */,
 				6560DB4D1F3EC0F9006ECED5 /* UIView+Frame.h */,
 				6560DB4E1F3EC0F9006ECED5 /* UIView+Frame.m */,
@@ -396,6 +487,7 @@
 		6560DB6C1F3F5E5F006ECED5 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				6527EA0F1F4D60D200A9FF8D /* FBKVOController */,
 				6560DB6D1F3F5E5F006ECED5 /* XHStarRateView */,
 			);
 			path = vendor;
@@ -447,6 +539,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6527EA3F1F557C0300A9FF8D /* Pin DeliciousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6527EA471F557C0300A9FF8D /* Build configuration list for PBXNativeTarget "Pin DeliciousTests" */;
+			buildPhases = (
+				6527EA3C1F557C0300A9FF8D /* Sources */,
+				6527EA3D1F557C0300A9FF8D /* Frameworks */,
+				6527EA3E1F557C0300A9FF8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6527EA461F557C0300A9FF8D /* PBXTargetDependency */,
+			);
+			name = "Pin DeliciousTests";
+			productName = "Pin DeliciousTests";
+			productReference = 6527EA401F557C0300A9FF8D /* Pin DeliciousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6560DADC1F3EB3CE006ECED5 /* Pin Delicious */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6560DAF41F3EB3CE006ECED5 /* Build configuration list for PBXNativeTarget "Pin Delicious" */;
@@ -476,6 +586,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = ericcao;
 				TargetAttributes = {
+					6527EA3F1F557C0300A9FF8D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6560DADC1F3EB3CE006ECED5;
+					};
 					6560DADC1F3EB3CE006ECED5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = DBBLJY69ER;
@@ -497,11 +612,19 @@
 			projectRoot = "";
 			targets = (
 				6560DADC1F3EB3CE006ECED5 /* Pin Delicious */,
+				6527EA3F1F557C0300A9FF8D /* Pin DeliciousTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6527EA3E1F557C0300A9FF8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6560DADB1F3EB3CE006ECED5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +633,7 @@
 				6560DB5A1F3EE731006ECED5 /* restaurantTableViewCell.xib in Resources */,
 				657388461F3FFBE40094A2CE /* ReviewsTableViewCell.xib in Resources */,
 				6560DAF01F3EB3CE006ECED5 /* LaunchScreen.storyboard in Resources */,
+				6527EA4D1F557F5700A9FF8D /* restaurants.json in Resources */,
 				6560DB671F3F5C58006ECED5 /* ReviewViewController.xib in Resources */,
 				6560DAED1F3EB3CE006ECED5 /* Assets.xcassets in Resources */,
 				6560DAEB1F3EB3CE006ECED5 /* Main.storyboard in Resources */,
@@ -567,12 +691,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6527EA3C1F557C0300A9FF8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6527EA431F557C0300A9FF8D /* Pin_DeliciousTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6560DAD91F3EB3CE006ECED5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6560DB781F3F7CC3006ECED5 /* PublishReviewViewController.m in Sources */,
 				657388451F3FFBE40094A2CE /* ReviewsTableViewCell.m in Sources */,
+				6527EA1E1F55137E00A9FF8D /* NavigationControllerDelegate.m in Sources */,
+				6527EA121F4D60D200A9FF8D /* FBKVOController.m in Sources */,
+				6527EA2A1F551D4700A9FF8D /* PushAnimator.m in Sources */,
+				65397C531F56E4DB008C2A1D /* CGXCachingImageView.m in Sources */,
 				6560DB461F3EBD42006ECED5 /* SearchViewController.m in Sources */,
 				6560DB421F3EBC97006ECED5 /* RestaurantListViewController.m in Sources */,
 				6560DB701F3F5E5F006ECED5 /* XHStarRateView.m in Sources */,
@@ -584,6 +720,7 @@
 				6560DB361F3EB706006ECED5 /* Restaurant.m in Sources */,
 				6560DB4F1F3EC0F9006ECED5 /* UIView+Frame.m in Sources */,
 				6560DB341F3EB706006ECED5 /* Location.m in Sources */,
+				6527EA271F5513DB00A9FF8D /* PopAnimator.m in Sources */,
 				6560DB321F3EB706006ECED5 /* Categories.m in Sources */,
 				6560DB311F3EB706006ECED5 /* AllDataReceivedModel.m in Sources */,
 				6560DB3B1F3EB706006ECED5 /* SearchViewModel.m in Sources */,
@@ -603,6 +740,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6527EA461F557C0300A9FF8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6560DADC1F3EB3CE006ECED5 /* Pin Delicious */;
+			targetProxy = 6527EA451F557C0300A9FF8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6560DAE91F3EB3CE006ECED5 /* Main.storyboard */ = {
@@ -624,6 +769,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6527EA481F557C0300A9FF8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pin DeliciousTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericcao.com.Pin-DeliciousTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pin Delicious.app/Pin Delicious";
+			};
+			name = Debug;
+		};
+		6527EA491F557C0300A9FF8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pin DeliciousTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericcao.com.Pin-DeliciousTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pin Delicious.app/Pin Delicious";
+			};
+			name = Release;
+		};
 		6560DAF21F3EB3CE006ECED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -747,6 +916,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6527EA471F557C0300A9FF8D /* Build configuration list for PBXNativeTarget "Pin DeliciousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6527EA481F557C0300A9FF8D /* Debug */,
+				6527EA491F557C0300A9FF8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6560DAD81F3EB3CE006ECED5 /* Build configuration list for PBXProject "Pin Delicious" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
