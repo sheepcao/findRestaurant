@@ -31,6 +31,9 @@
 
 @implementation RestaurantListViewController
 
+static NSString *CellIdentifier = @"restaurantCell";
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -43,6 +46,7 @@
     
     self.restaurantListView.restaurantList.delegate = self;
     self.restaurantListView.restaurantList.dataSource = self;
+    [self.restaurantListView.restaurantList registerNib:[UINib nibWithNibName:@"restaurantTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
 
     
     [self addSearch];
@@ -200,15 +204,16 @@
 #pragma mark TableView Datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"restaurantCell";
     restaurantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"restaurantTableViewCell" owner:self options:nil] lastObject];
+
+        PDLog(@"new cell: %lu",indexPath.row);
+
     }
-    
+    [cell.thumbButton addTarget:self action:@selector(thumbDownAction:) forControlEvents:UIControlEventTouchUpInside];
     [cell setupCellWith:self.restaurantViewModel.restaurantModels[indexPath.row]];
     cell.thumbButton.tag = indexPath.row;
-    [cell.thumbButton addTarget:self action:@selector(thumbDownAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
